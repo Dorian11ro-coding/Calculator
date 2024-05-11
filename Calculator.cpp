@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <unistd.h>
+#include <cstdlib>
+
 
 using namespace std;
 
@@ -84,5 +87,24 @@ int main(int argc, char** argv) {
                     return 0;
                 }
                 return 0;
+                
+            case 727:
+                cout << "Are you sure you want to enable the easter egg?\n";
+                cout << "1 for yes\n";
+                cout << "2 for no\n";
+                cout << "Choice: ";
+                cin >> strchoice;
+                if(strchoice == "1"){
+                    while(true){
+                        cout << "WHEN YOU SEE IT!!!!\n";
+                        cout << "👈👈👈👈👈👈👈👈👈👈👈👈👈";
+                        }
+                                       
+                    
+                }
+                else if(strchoice == "2"){
+                    return 0;
+                }
+                
     }
 }
