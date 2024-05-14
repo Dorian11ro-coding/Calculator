@@ -2,7 +2,6 @@
 #include <string>
 #include <cmath>
 #include <unistd.h>
-#include <cstdlib>
 
 
 using namespace std;
@@ -14,7 +13,8 @@ int main(int argc, char** argv) {
     cout << "For divisions, press 4\n";
     cout << "For powers, press 5\n";
     cout << "For finding the area of a circle, press 6\n";
-    cout << "For finding the square root, press 7\n";
+    cout << "For square root, press 7\n";
+    cout << "For converting farenheight and celsius, press 8\n";
 
     cout << "Choice: ";
     int choice;
@@ -72,7 +72,7 @@ int main(int argc, char** argv) {
             case 6:
                 cout << "Radius: ";
                 cin >> radius;
-                cout << "Area of circle is " << pi*radius*radius << "\n";
+                cout << "Area of circle is " << pi*radius << "\n";
                 return 0;
 
             case 7:
@@ -98,13 +98,40 @@ int main(int argc, char** argv) {
                     while(true){
                         cout << "WHEN YOU SEE IT!!!!\n";
                         cout << "👈👈👈👈👈👈👈👈👈👈👈👈👈";
-                        }
+                    }
                                        
                     
                 }
                 else if(strchoice == "2"){
                     return 0;
                 }
+            case 8:
+                float celsius;
+                float farenheight;
+                int tunitchoice;;
+
+                cout << "For converting celsius to farenheight, press 1\n";
+                cout << "For converting farenheight to celsius, press 2\n";
+                cout << "Choice: ";
+
+                cin >> tunitchoice;;
+
+                switch(tunitchoice){
+                    case 1:
+                        cout << "Celsius: ";
+                        cin >> celsius;
+                        farenheight = (celsius * 9/5) + 32;
+                        cout << farenheight << endl;
+                        return 0;
+                        
+                    case 2:
+                        cout << "Farenheight: ";
+                        cin >> farenheight;
+                        celsius = (farenheight - 32) * 5/9;
+                        cout << celsius << endl;
+                        return 0;
+                }
+
                 
     }
 }
