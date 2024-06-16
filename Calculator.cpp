@@ -6,6 +6,7 @@
 
 using namespace std;
 
+
 int main(int argc, char** argv) {
     cout << "For additions, press 1\n";
     cout << "For subtractions, press 2\n";
@@ -13,8 +14,7 @@ int main(int argc, char** argv) {
     cout << "For divisions, press 4\n";
     cout << "For powers, press 5\n";
     cout << "For finding the area of a circle, press 6\n";
-    cout << "For square root, press 7\n";
-    cout << "For converting farenheight and celsius, press 8\n";
+    cout << "For converting farenheight and celsius and also kelvin values, press 8\n";
 
     cout << "Choice: ";
     int choice;
@@ -94,10 +94,12 @@ int main(int argc, char** argv) {
             case 8:
                 float celsius;
                 float farenheight;
-                int tunitchoice;;
+                int tunitchoice;
+                
 
                 cout << "For converting celsius to farenheight, press 1\n";
                 cout << "For converting farenheight to celsius, press 2\n";
+                cout << "For converting with kelvin values, press 3\n";
                 cout << "Choice: ";
 
                 cin >> tunitchoice;;
@@ -116,6 +118,53 @@ int main(int argc, char** argv) {
                         celsius = (farenheight - 32) * 5/9;
                         cout << celsius << endl;
                         return 0;
+                    
+                    case 3:
+                        int kelvinchoice;
+                        cout << "For converting kelvin to celsius, press 1\n";
+                        cout << "For converting kelvin to farenheight, press 2\n";
+                        cout << "For converting celsius to kelvin, press 3\n";
+                        cout << "For converting farenheight to kelvin, press 4\n";
+                        cout << "Choice: ";
+                        
+                        cin >> kelvinchoice;
+                        float kelvin;
+
+                        switch(kelvinchoice){
+                            case 1:
+                                cout << "Kelvin: ";
+                                cin >> kelvin;   
+                                celsius = kelvin - 273.15;
+                                cout << celsius << endl;
+                                return 0;
+
+                            case 2:
+                                cout << "Kelvin: ";
+                                cin >> kelvin;
+                                farenheight = (kelvin - 273.15) * 1.8 + 32;
+                                cout << farenheight << endl;
+                                return 0;
+
+                            case 3:
+                                cout << "Celsius: ";
+                                cin >> celsius;
+                                kelvin = celsius + 273.15;
+                                cout << kelvin << endl;
+                                return 0;
+
+                            case 4:
+                                cout << "Farenheight: ";
+                                cin >> farenheight;
+                                kelvin = (farenheight - 32) * 5/9 + 273.15;
+                                cout << kelvin << endl;
+                                return 0;
+
+
+                        }
+
+
+
+
                 }
 
                 
