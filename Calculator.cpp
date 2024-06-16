@@ -27,7 +27,6 @@ int main(int argc, char** argv) {
     float baza;
     float radius;
     float pi = 3.14159;
-    double sqrtnmb;
     switch(choice){
             case 1:
                 cout << "Number 1: ";
@@ -73,19 +72,6 @@ int main(int argc, char** argv) {
                 cout << "Radius: ";
                 cin >> radius;
                 cout << "Area of circle is " << pi*radius << "\n";
-                return 0;
-
-            case 7:
-                cout << "Enter a number: ";
-                cin >> sqrtnmb;
-                if(sqrtnmb < 0){
-                    cout << "Square root negative numbers are undefined\n";
-                    return 1;
-                }
-                else{
-                    cout << "Square root of " << sqrtnmb << " is: " << sqrt(sqrtnmb) << "\n";
-                    return 0;
-                }
                 return 0;
                 
             case 727:
